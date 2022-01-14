@@ -1,10 +1,11 @@
 import React from "react";
 type ContainerProps = {
   styles: React.CSSProperties;
+  children: React.ReactNode;
 };
 
-const Container = (props: ContainerProps) => {
-  return <div style={props.styles}>Content goes here</div>;
+const Container = ({ styles, children }: ContainerProps) => {
+  return <div style={styles}>{children}</div>;
 };
 
 export default Container;

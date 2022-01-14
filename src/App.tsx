@@ -1,17 +1,24 @@
 import React from "react";
 import Container from "./Components/Container";
+import Person from "./Components/Person";
 
 function App() {
+  const person = {
+    first: "Alif",
+    last: "Bin Hossain",
+  };
   return (
     <div className="App">
       <Container
         styles={{
           border: "1px solid #eeee",
-          margin: "2rem auto",
-          width: "50%",
-          padding: "6rem",
+          margin: "2rem 4rem",
+          textAlign: "center",
+          minHeight: "50vh",
         }}
-      ></Container>
+      >
+        <Person name={person}></Person>
+      </Container>
     </div>
   );
 }
