@@ -1,18 +1,17 @@
 import React from "react";
-import Button from "./Components/Button";
-import Input from "./Components/Input";
+import Container from "./Components/Container";
 
 function App() {
-  const handleButton = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(event.target);
-  };
-
   return (
     <div className="App">
-      <Button handleClick={(id) => alert(`button clicked ${id}`)}></Button>
-      <Input value="" handleChange={(event) => console.log(event)} />
-
-      <button onClick={handleButton}>Click Me</button>
+      <Container
+        styles={{
+          border: "1px solid #eeee",
+          margin: "2rem auto",
+          width: "50%",
+          padding: "6rem",
+        }}
+      ></Container>
     </div>
   );
 }
