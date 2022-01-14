@@ -1,18 +1,18 @@
 import React from "react";
-import Greetings from "./Components/Greetings";
-import Heading from "./Components/Heading";
-import Oscar from "./Components/Oscar";
-import Status from "./Components/Status";
+import Button from "./Components/Button";
+import Input from "./Components/Input";
 
 function App() {
+  const handleButton = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log(event.target);
+  };
+
   return (
     <div className="App">
-      <Greetings name="Alif" isLoggedIn={true}></Greetings>
-      <Status status="success" />
-      <Heading>Explore Typescript</Heading>
-      <Oscar>
-        <Heading>Oscar award goes to Leonardo Di Caprio </Heading>
-      </Oscar>
+      <Button handleClick={(id) => alert(`button clicked ${id}`)}></Button>
+      <Input value="" handleChange={(event) => console.log(event)} />
+
+      <button onClick={handleButton}>Click Me</button>
     </div>
   );
 }
