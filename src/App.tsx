@@ -1,10 +1,13 @@
 import React from "react";
-import LoggedIn from "./States/LoggedIn";
+import User from "./Context/User";
+import UserContextProvider from "./Context/UserContext";
 
 function App() {
   return (
     <div className="App">
-      <LoggedIn></LoggedIn>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
